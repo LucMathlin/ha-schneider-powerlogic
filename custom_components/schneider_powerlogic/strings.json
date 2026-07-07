@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Schneider PowerLogic Meter",
+        "description": "Enter the connection details for your PowerLogic meter.",
+        "data": {
+          "name": "Meter Name (e.g. DB-1)",
+          "host": "IP Address",
+          "port": "Modbus TCP Port",
+          "slave": "Slave ID"
+        }
+      },
+      "sensors": {
+        "title": "Select Sensor Groups",
+        "description": "Active Power sensors are always included. Choose which additional sensor groups to enable.",
+        "data": {
+          "voltage":        "Voltages",
+          "current":        "Currents",
+          "reactive_power": "Reactive & Apparent Power",
+          "power_factor":   "Power Factor & Frequency",
+          "energy":         "Energy (kWh)",
+          "temperature":    "Temperature",
+          "thd":            "THD (Total Harmonic Distortion)",
+          "invert_power":   "Invert Active & Reactive Power (CT wired in reverse)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the meter. Check the IP address and port.",
+      "invalid_slave":  "Could not read from the meter. Check the Slave ID.",
+      "unknown":        "Unexpected error. Check the logs for details."
+    },
+    "abort": {
+      "already_configured": "A meter with this IP and Slave ID is already configured."
+    }
+  }
+}
